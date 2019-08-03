@@ -1,0 +1,753 @@
+/*! HTML5 Boilerplate v7.2.0 | MIT License | https://html5boilerplate.com/ */
+
+/* main.css 2.0.0 | MIT License | https://github.com/h5bp/main.css#readme */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Vendor-prefixed and regular ::selection selectors cannot be combined:
+ * https://stackoverflow.com/a/16982510/7133471
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+  resize: vertical;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden {
+  display: none !important;
+}
+
+/*
+* Hide only visually, but have it available for screen readers:
+* https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+*
+* 1. For long content, line feeds are not interpreted as spaces and small width
+*    causes content to wrap 1 word per line:
+*    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+*/
+
+.sr-only {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  /* 1 */
+}
+
+/*
+* Extends the .sr-only class to allow the element
+* to be focusable when navigated to via the keyboard:
+* https://www.drupal.org/node/897638
+*/
+
+.sr-only.focusable:active,
+.sr-only.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  white-space: inherit;
+  width: auto;
+}
+
+/*
+* Hide visually and from screen readers, but maintain layout
+*/
+
+.invisible {
+  visibility: hidden;
+}
+
+/*
+* Clearfix: contain floats
+*
+* For modern browsers
+* 1. The space content is one way to avoid an Opera bug when the
+*    `contenteditable` attribute is included anywhere else in the document.
+*    Otherwise it causes space to appear at the top and bottom of elements
+*    that receive the `clearfix` class.
+* 2. The use of `table` rather than `block` is only necessary if using
+*    `:before` to contain the top-margins of child elements.
+*/
+
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+  (-webkit-min-device-pixel-ratio: 1.25),
+  (min-resolution: 1.25dppx),
+  (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+  *,
+  *:before,
+  *:after {
+    background: transparent !important;
+    color: #000 !important;
+    /* Black prints faster */
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+  /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+  a[href^="#"]:after,
+  a[href^="javascript:"]:after {
+    content: "";
+  }
+  pre {
+    white-space: pre-wrap !important;
+  }
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+  /*
+     * Printing Tables:
+     * https://web.archive.org/web/20180815150934/http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+  thead {
+    display: table-header-group;
+  }
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+  p,
+  
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+  
+  h3 {
+    page-break-after: avoid;
+  }
+}
+h2.h2{
+  font-family: 'Oswald',sans-serif;
+  font-size: 2.4rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+h2.h2::after{
+  content: '';
+  margin: 0 auto;
+  background-image: url(../img/img/separador.png);
+  display: block;
+  width: 100px;
+  height: 30px;
+
+
+}
+section.section-contenedor{
+  padding: 30px 0;
+}
+section.section-contenedor p{
+  text-align: center;
+  font-size: 1.3rem;
+}
+/*here begins programation style sheet cascade*/
+html{
+  box-sizing: border-box;
+}
+*,*:before,*:after{
+  box-sizing: inherit;
+}
+body{
+ background-color: #f2f2f2;
+
+}
+.hero{
+  background-image: url(../img/img/encabezado.jpg);
+  height: 100vh;
+  background-position: top center;
+}
+.contenido-header{
+  padding-top: 40px;
+}
+.redes-sociales{
+  text-align: center;
+}
+.redes-sociales a{
+  color: #fff;
+  margin-left: 1.2rem;
+  font-size: 2em;
+}
+@media only screen and (min-width:768px){
+
+  .informacion-evento{
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 50px;
+    
+  }
+}
+.informacion-evento{
+  text-align: center;
+  color: #fff;
+ 
+  
+}
+.informacion-evento p{
+  margin: 0;
+  font-size: 20px;
+  display: inline;
+  text-transform: uppercase;
+}
+.informacion-evento p i{
+  color: red;
+  font-size: 1.5rem;
+  margin-right: 1rem;
+}
+.fecha{
+  float: left;
+}
+.ciudad{
+  float: right;
+  text-align: right;
+}
+
+.nombre-sitio{
+  font-size: 80px;
+  font-weight: bold;
+  text-transform: uppercase;
+  
+}
+@media only screen and (max-width:768px){
+  .nombre-sitio{
+    font-size: 60px;
+  
+  }
+}
+.contenedor{
+  width: 98%;
+  margin: 0 auto;
+}
+@media only screen and (min-width:480px){
+  .contenedor{
+    width: 95%;
+  
+  }
+
+}
+@media only screen and (min-width:768px){
+  .contenedor{
+    width: 90%;
+  
+  }
+}
+@media only screen and (min-width:992){
+  .contenedor{
+    width: 90%;
+    max-width: 1100px;
+  
+  }
+}
+/*barra de navegacioon principal*/
+
+.barra{
+  background-color: #353535;
+  padding: 20px 0;
+}
+.logo {
+  width: 80%;
+}
+.logo img{
+  width: 100%;
+}
+@media only screen and (min-width:768px){
+
+  .logo{
+    width: 33%;
+    float: left;
+  }
+}
+.navegacion-principal{
+  display: none;
+}
+.navegacion-principal a{
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: white;
+  margin-bottom: 10px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  width: 100%;
+  display: block;
+  text-align: center;
+  text-transform: uppercase;
+}
+@media only screen and (min-width:768px){
+  .navegacion-principal{
+    width: 67%;
+    float: right;
+    text-align: right;
+    display: block;
+  }
+  .navegacion-principal a{
+  
+   padding: 20px ;
+   color: #fff;
+   text-decoration: none;
+   text-transform: uppercase;
+   font-size: 1.3em;
+   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+   line-height: 80px;
+  
+   display: inline;
+   margin: 0;
+
+  }
+  .navegacion-principal a:hover{
+    background-color: rgb(255, 115, 0);
+  }
+}
+
+/*Menu Movil*/
+.menu-movil{
+ width: 7%;
+ float: right;
+ margin-bottom: 30px;
+ display: block;
+ text-align: right;
+
+}
+.menu-movil:hover{
+  cursor: pointer;
+}
+@media only screen and (min-width:768px){
+  .menu-movil{
+    display: none;
+  }
+}
+.menu-movil span{
+ display: block;
+ background-color: white;
+ height: 8px;
+ margin-bottom: 6px;
+}
+
+/*section programa */
+
+section.programa{
+  position: relative;
+}
+.contenedor-video{
+  max-width: 100%;
+  overflow-x:hidden; 
+}
+.contenido-programa{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  margin-top: 100px;
+}
+.programa-evento{
+  background-color:rgba(229, 238, 240, 0.7);
+  padding: 15px;
+}
+@media only screen and (min-width:768px){
+  .programa-evento{
+    width: 70%;
+  }
+}
+
+@media only screen and (min-width:992px){
+  .programa-evento{
+    width: 50%;
+  }
+}
+
+.menu-programa{
+  width: 100%;
+  border-bottom:1px solid orange ;
+  padding-bottom: 10px;
+}
+
+.menu-programa a{
+  display: block;
+ margin-left: 5px;
+ text-decoration: none;
+ font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+ color:black;
+ text-align: center;
+ margin-bottom: 10px;
+}
+.menu-programa i{
+  color:orange;
+  margin-right: 8px;
+  font-size: 1.7rem;
+  align-content: initial;
+}
+@media only screen and (min-width:768px){
+  .menu-programa{
+    display: table;
+  }
+  .menu-programa a{
+    display: table-cell;
+  }
+}
+.detalle-evento{
+  border-bottom: 1px solid black;
+}
+.detalle-evento i{
+  font-size:1.2rem;
+  color:orange;
+  margin-right: 10px;
+}
+                                          /*boton clase button*/
+.button{
+  text-decoration: none; 
+  background-color: orange;
+  padding: 10px 30px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: white;
+  display: inline-block;
+  border: 1px solid black;
+   
+}
+ul.lista-invitados li div img{
+  width: 450px;
+  height: 300px;
+}
+/* estilos para fotos de viajes*/
+ul{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+ul.lista-invitados li{
+  padding:10px;
+  float: left;
+  
+}
+
+@media only screen and (min-width:480px){
+  ul.lista-invitados li{
+    width: 50%;
+  }
+}
+
+@media only screen and (min-width:768px){
+  ul.lista-invitados li{
+    width: 33.3%;
+  }
+}
+div.invitado{
+  position: relative;
+  overflow: hidden;
+  
+}
+div.invitado img{
+  max-width: 100%;
+  border-radius: .7rem;
+  
+}
+
+ div.invitado p{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 15px 45px;
+  margin: 0;
+  font-size: 2rem;
+  color:rgba(0, 0, 0, 0.7);
+  font-weight: bold;
+  background-color: rgba(229, 238, 240, 0.5);
+  width: 100%;
+  text-transform: capitalize;
+ /* -webkit-transition: all .5s ease-in-out;*/
+}
+div.invitado:hover p{
+  bottom: -80px;
+  opacity: 0;
+  
+}
+/*contador de tiempo para proximo viaje*/
+.parallax::before{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+}
+div.contenido-contador{
+ position: relative;
+ height: 350px;
+}
+
+div.contenido-contador::before{
+ background-image: url(../img/img/bg-resumen.jpg);
+ content:'';
+}
+ul.resumen-evento{
+  position: relative;
+  padding: 120px 0px;
+}
+ul.resumen-evento li{
+  width:33.3%;
+  float: left;
+  text-align: center;
+  text-transform: uppercase;
+  color: white;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 24px;
+  font-weight: bold;
+}
+@media only screen and (min-width:768px){
+  ul.resumen-evento li{
+    width:33.3%;
+    float: left;
+    text-align: center;
+  
+  }
+}
+p.numero{
+  font-size :60px;
+  color:red;
+  display: block;
+  margin: 0 0 10px 0; 
+}
+
+div.contenido-precios{
+
+  position: absolute;
+  width: 100%;
+}
+div.precios{
+  position: relative;
+  width: 100%;
+  
+}
+ul.listado-precios{
+
+  width: 80%;
+  float: left;
+  padding: 46px ;
+  margin-left: 10%;
+}
+@media only screen and (min-width:768px){
+
+  ul.listado-precios{
+
+    width: 33%;
+    float: left;
+    padding: 20px 100px;
+    margin-left: 0;
+    
+  }
+}
+
+div.division-border{
+  text-align: center;
+  padding: 40px 0;
+  border: 1px solid black;
+  background-color: #ffffff;
+  
+}
+div.division-border:hover{
+  transform: scale(1.2);
+  transition:cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+
+div.mapa{
+  
+  height: 400px;
+  width: 90%;
+  
+ margin: auto;
+ margin-top: 1400px;
+}
+@media only screen and (min-width:768px){
+  div.mapa{
+    margin-top: 430px;
+  }
+}
+
+footer{
+  width: 100%;
+  
+  height: 400px;
+  background: #353535;
+  
+}
+.contenedor-footer{
+  width: 100%;
+  float: left;
+  opacity: .5;
+  height: 33%;
+  
+  padding: 30px;
+  
+ 
+}
+@media only screen and (min-width:768px){
+  .contenedor-footer{
+    width: 33.3%;
+    height: 100%;
+    padding: 150px;
+  }
+}
+.contenedor-footer h2{
+  text-align: center;
+  margin-top:-10px;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  color: orange;
+ 
+}
+@media only screen and (min-width:768px){
+.contenedor-footer h2{
+  margin-top:-50px;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  color: orange;
+  
+}
+}
