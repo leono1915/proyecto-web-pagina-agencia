@@ -672,6 +672,10 @@ ul.listado-precios{
   padding: 46px ;
   margin-left: 10%;
 }
+ul.listado-precios h2{
+   color: red;
+   font-size:  4rem;
+}
 @media only screen and (min-width:768px){
 
   ul.listado-precios{
@@ -685,6 +689,7 @@ ul.listado-precios{
 }
 
 div.division-border{
+  min-width: 200px;;
   text-align: center;
   padding: 40px 0;
   border: 1px solid black;
