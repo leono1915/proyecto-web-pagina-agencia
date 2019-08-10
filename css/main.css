@@ -756,3 +756,14 @@ footer{
   
 }
 }
+.h3{
+  text-transform: uppercase;
+  color: orange;
+  text-align: center;
+  font-size: 2em;
+}
+.caja{
+  
+  
+  background: #ffffff ;
+}
